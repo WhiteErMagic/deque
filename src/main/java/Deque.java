@@ -14,7 +14,6 @@ class Deque {
          data[tail++] = value;
          if (tail == size)
             tail = 0;
-
      }
 
      int popBack() {
