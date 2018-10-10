@@ -11,22 +11,24 @@ class Deque {
      }
 
      void pushBack(int value) {
-        if (++tail == size)
+         data[tail++] = value;
+         if (tail == size)
             tail = 0;
-        data[tail] = value;
+
      }
 
      int popBack() {
-         int ret = data[tail];
          if (--tail < 0)
              tail = size - 1;
+         int ret = data[tail];
          return ret;
      }
 
      void pushFront(int value) {
-         data[head] = value;
-         if (--head < 0)
+         data[head--] = value;
+         if (head < 0)
              head = size - 1;
+
      }
 
      int popFront() {
