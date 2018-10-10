@@ -27,7 +27,6 @@ class Deque {
          data[head--] = value;
          if (head < 0)
              head = size - 1;
-
      }
 
      int popFront() {
